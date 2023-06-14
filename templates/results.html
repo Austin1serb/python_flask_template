@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .result-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .result-item {
+      margin-bottom: 10px;
+    }
+
+    .result-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Form Submission Results</h2>
+  <div class="result-container">
+    <div class="result-item">
+        <form action="/process" method='post'>
+      <span class="result-label">Your Name:</span>
+      <span class="result-value">{{session['name']}}</span>
+    </div>
+    <div class="result-item">
+      <span class="result-label">Dojo Location:</span>
+      <span class="result-value">{{session['location']}}</span>
+    </div>
+    <div class="result-item">
+      <span class="result-label">Favorite Language:</span>
+      <span class="result-value">{{session['language']}}</span>
+    </div>
+    <div class="result-item">
+      <span class="result-label">Comment:</span>
+      <span class="result-value">{{session['comment']}}</span>
+    </form>
+    </div>
+  </div>
+</body>
+</html>
+
+</body>
+</html>
